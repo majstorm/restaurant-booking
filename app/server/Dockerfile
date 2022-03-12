@@ -3,13 +3,13 @@
  RUN mkdir -p /app
  WORKDIR /app
 
- #COPY package.json /app
- #RUN npm install
+ COPY package.json /app
+ RUN npm install
 
- #COPY . /app
+ COPY . /app
 
  EXPOSE 7500
 
  ENTRYPOINT ["node"]
 
- #CMD ["app.js"]
+ CMD ["index.js"]
