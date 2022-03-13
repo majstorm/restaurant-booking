@@ -2,14 +2,15 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --inspect=0.0.0.0 -L app.js"
   },
   "dependencies": {
+    "@koa/router": "^10.1.1",
     "body-parser": "^1.19.2",
     "cors": "^2.8.5",
-    "create-react-app": "^5.0.0",
+    "dotenv": "^16.0.0",
     "koa": "^2.13.4",
     "mongoose": "^6.2.5"
   },

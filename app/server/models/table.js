@@ -27,6 +27,4 @@ const TableSchema = new mongoose.Schema({
     },
 })
 
-let Table = mongoose.model('Table', TableSchema, 'Tables')
-
-module.exports = Table
+export default TableSchema

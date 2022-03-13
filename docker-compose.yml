@@ -9,19 +9,35 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: $MONGO_USER
       MONGO_INITDB_ROOT_PASSWORD: $MONGO_PASSWORD
+    networks:
+      - restaurant-app
   node-server:
     build: ./app/server
     ports:
       - "8080:7500"
+    volumes:
+      - ./app/server:/app
+      - /app/node_modules
+    env_file: .env
     depends_on:
       - mongodb
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks:
+      - restaurant-app
   react-app:
     build: ./app/client
     ports:
       - "3000:3000"
     volumes:
       - ./app/client/src:/app/src
-    stdin_open: true # docker run -i
-    tty: true        # docker run -t
+      - /app/node_modules
+    #stdin_open: true # docker run -i
+    #tty: true        # docker run -t
     depends_on:
       - node-server
+    networks:
+      - restaurant-app
+networks:
+  restaurant-app:
+    driver: bridge

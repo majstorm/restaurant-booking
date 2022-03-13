@@ -10,6 +10,4 @@
 
  EXPOSE 7500
 
- ENTRYPOINT ["node"]
-
- CMD ["index.js"]
+ CMD ["npm","start"]
