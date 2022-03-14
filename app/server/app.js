@@ -1,25 +1,22 @@
 require('dotenv').config();
 const Koa = require('koa');
-const Router = require('@koa/router')
 const Mongoose = require('mongoose')
-
+const router = require('./routes/routes')
 const app = new Koa();
-const router = new Router();
 
 const mongoURI = process.env.MONGO_URI;
 
+
+// MongoDb connection
 Mongoose
   .connect(
-    'mongodb://mongodb:27017/restaurant',
-    { useNewUrlParser: true }
+    'mongodb://mongodb:27017',
+    { useNewUrlParser: true, user: process.env.MONGO_USER, pass: process.env.MONGO_PASSWORD }
   )
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
-router.get('main', '/', (ctx) => {
-    ctx.body = 'Booking Restaurant!';
-  });
-
+// Associate router from routes/
 app
   .use(router.routes())
   .use(router.allowedMethods());

@@ -1,8 +1,5 @@
 const mongoose = require('mongoose')
 
-/**
-* Booking Schema
-*/
 const BookingSchema = new mongoose.Schema({
     DateTime: {
         type: Date,
@@ -16,10 +13,14 @@ const BookingSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    GuestNumber: {
+        type: Number,
+        required: true
+    },
     CreatedAt: {
         type: Date,
         required: true
     },
 })
 
-export default BookingSchema
+module.exports = Booking = mongoose.model('booking', BookingSchema);
