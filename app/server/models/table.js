@@ -1,8 +1,5 @@
 const mongoose = require('mongoose')
 
-/**
-* Table Schema
-*/
 const TableSchema = new mongoose.Schema({
     Id: {
         type: Number,
@@ -15,16 +12,17 @@ const TableSchema = new mongoose.Schema({
     },
     Type: {
         type: String,
+        default: "Standard",
         required: true
     },
     Description: {
         type: String,
+    },
+    RestaurantId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Restaurant',
         required: true
     },
-    created_at: {
-        type: Date,
-        required: true
-    },
-})
+},{timestamps:true})
 
-export default TableSchema
+module.exports = Table = mongoose.model('table', TableSchema);

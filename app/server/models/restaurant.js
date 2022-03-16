@@ -1,22 +1,26 @@
 const mongoose = require('mongoose');
-const passportLocalMongoose = require('passport-local-mongoose');
 
 const restaurantSchema = mongoose.Schema({
-  Id:{
-    type: Number,
-    unique: true
-  },
   Name: {
     type: String,
+    required: true,
+    unique: true
   },
   Email: {
     type: String,
   },
   CompanyName: {
     type: String,
+    required: true
   },
+  OpenHour: {
+    type: Number,
+    required: true
+  },
+  CloseHour: {
+    type: Number,
+    required: true
+  }
 })
 
-restaurantSchema.plugin(passportLocalMongoose);
-
-export default restaurantSchema
+module.exports = Restaurant = mongoose.model('restaurant', restaurantSchema);
