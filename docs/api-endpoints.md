@@ -4,18 +4,18 @@ These endpoints allow you to handle Stripe subscriptions for Publish and Analyze
 
 ## GET
 [/restaurant](#get-restaurant) <br/>
-[/restaurant/:name](#get-restaurant-name) <br/>
-[/restaurant/:name/tables](#get-restaurant-name-tables) <br/>
+[/restaurant/:name](#get-restaurantname) <br/>
+[/restaurant/:name/tables](#get-restaurantname-tables) <br/>
 
 ## POST
 [/restaurant](#post-restaurant) <br/>
-[/restaurant/:name/add-table](#post-1billingcancel-trialjson) <br/>
-[/restaurant/:name/reserve-table](#post-1billingstart-or-update-subscriptionjson) <br/>
-[/restaurant/:name/cancel-reservation](#post-1billingcancel-subscriptionjson) <br/>
+[/restaurant/:name/add-table](#post-restaurantname-add-table) <br/>
+[/restaurant/:name/reserve-table](#post-restaurantname-reserve-table) <br/>
+[/restaurant/:name/cancel-reservation](#post-restaurantname-cancel-reservation) <br/>
 
 ## PUT
-[/restaurant/:name/reserve-table](#post-restaurant) <br/>
-[/restaurant/:name/working-hours](#post-restaurant) <br/>
+[/restaurant/:name/reserve-table](#put-restaurantname-reserve-table) <br/>
+[/restaurant/:name/working-hours](#put-restaurantname-working-hours) <br/>
 ___
 
 ### GET /restaurant

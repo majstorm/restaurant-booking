@@ -130,7 +130,7 @@ Roadmap section describes what was the overall goals
 
 Backend API is served on port 8080 of the machine which is running docker
 
-API endpoints are defined in the [documentation]()
+API endpoints are defined in the [documentation](https://github.com/majstorm/restaurant-booking/blob/main/docs/api-endpoints.md)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -139,13 +139,18 @@ API endpoints are defined in the [documentation]()
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Restaurant addition endpoint
+- [x] Restaurant creation endpoint
 - [x] Restaurant working hours edit endpoint
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [x] Add tables for restaurant endpoint
+- [x] Edit Restaurant working hours endpoint
+- [x] Initialize testing suite and prepare initial test
+- [x] Reserve a table endpoint
+- [x] Edit Reservation endpoint
+- [x] Setup frontend (port 3000)
+- [x] Add documentation for the endpoints
+- [ ] Implement User authentication and authorization
+- [ ] Integrate API calls with frontend
+- [ ] Implement waiting queue
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
