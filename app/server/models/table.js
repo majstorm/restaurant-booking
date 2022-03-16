@@ -12,8 +12,7 @@ const TableSchema = new mongoose.Schema({
     },
     Type: {
         type: String,
-        default: "Standard",
-        required: true
+        default: "Standard"
     },
     Description: {
         type: String,

@@ -116,6 +116,8 @@ _In order to have the app running, follow these steps_
    ```sh
    docker-compose up
    ```  
+6. All set! Head to Usage section
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -124,9 +126,11 @@ _In order to have the app running, follow these steps_
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Roadmap section describes what was the overall goals
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+Backend API is served on port 8080 of the machine which is running docker
+
+API endpoints are defined in the [documentation]()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -135,8 +139,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
+- [x] Restaurant addition endpoint
+- [x] Restaurant working hours edit endpoint
 - [ ] Add Additional Templates w/ Examples
 - [ ] Add "components" document to easily copy & paste sections of the readme
 - [ ] Multi-language Support

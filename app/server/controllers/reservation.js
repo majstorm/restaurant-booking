@@ -4,14 +4,18 @@ const Table = require('../models/table');
 
 module.exports.reservation_list = async (ctx) => {
     try{
-        let reservations = await Reservations.find()
+        let restaurant = await Restaurant.findOne({Name:ctx.params["name"]})
+        let tables = await Table.find({RestaurantId: restaurant._id}).distinct('_id')
+        console.log(tables)
+        let reservations = await Reservations.find({TableId: {$in:tables}})
+        console.log(reservations)
         ctx.response.body = reservations;
         ctx.response.status = 200;
     }
     catch(err){
         console.error(err);
         ctx.response.status = 400;
-        ctx.response.body = {"msg":"Error: Error querying reservations"};
+        ctx.response.body = {"msg":"Error: No restaurant available"};
     }
 }
 
@@ -42,6 +46,8 @@ module.exports.update_reservation = async (ctx) => {
                     return ctx.response.status = 201;
                 }
             }
+        ctx.response.status = 400;
+        ctx.response.body = {"msg":"Error: No reservation to update"};
         };
     }catch(err){
         console.error(err);
