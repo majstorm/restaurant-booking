@@ -1,5 +1,4 @@
 const Router = require('@koa/router')
-const getBookings = require('../services/list-bookings')
 const KoaBody = require('koa-body');
 const reservation_controller = require('../controllers/reservation')
 const restaurant_controller = require('../controllers/restaurant')

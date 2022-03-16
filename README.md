@@ -102,14 +102,20 @@ _In order to have the app running, follow these steps_
    ```sh
    git clone https://github.com/majstorm/restaurant-booking.git
    ```
-3. Install NPM packages
+3. Create global environment file .env inside the /restaurant-booking with defined fields
    ```sh
-   npm install
+   MONGO_USER=root
+   MONGO_PASSWORD=superbroot
+   MONGO_DB=restaurant
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. Build the docker services using docker-compose and command
+   ```sh
+   docker-compose build
    ```
+5. Start the services with command
+   ```sh
+   docker-compose up
+   ```  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
